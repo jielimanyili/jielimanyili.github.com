@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ember Data | Jie's blog]]></title>
+  <link href="http://jielimanyili.github.com/blog/categories/ember-data/atom.xml" rel="self"/>
+  <link href="http://jielimanyili.github.com/"/>
+  <updated>2013-03-18T04:34:10-07:00</updated>
+  <id>http://jielimanyili.github.com/</id>
+  <author>
+    <name><![CDATA[Jie Li]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to query RESTful endpoint with additional query parameters using Ember Data]]></title>
+    <link href="http://jielimanyili.github.com/blog/2013/03/17/how-to-query-restful-endpoint-with-additional-query-parameters-using-ember-data/"/>
+    <updated>2013-03-17T09:45:00-07:00</updated>
+    <id>http://jielimanyili.github.com/blog/2013/03/17/how-to-query-restful-endpoint-with-additional-query-parameters-using-ember-data</id>
+    <content type="html"><![CDATA[<h2>Problem</h2>
+
+<p>I have an Ember web application. And I am using Ember Data's build-in REST Adapter to call an external service endpoint. The service provides search and accepts a list of query parameters and uses them as filters to refine the search. Here is an example:</p>
+
+<blockquote><p>http://my.website.url/rest/organizations?country=us&amp;state=ohio</p></blockquote>
+
+<p>Pretty straight forward. Here is my Ember code.</p>
+
+<p>``` javascript
+// Route
+App.OrganizationsRoute = Ember.Route.extend({</p>
+
+<pre><code>model: function() {
+    return App.Organization.find();
+}
+</code></pre>
+
+<p>});</p>
+
+<p>// Store
+App.Adapter = DS.RESTAdapter.extend({</p>
+
+<pre><code>bulkCommit: false,
+url: "http://my.website.url/rest/organizations?country=us&amp;state=ohio"
+</code></pre>
+
+<p>});
+App.Store = DS.Store.extend({</p>
+
+<pre><code>revision: 11,
+adapter: App.Adapter.create()
+</code></pre>
+
+<p>});
+```</p>
+
+<p>Problem was, Ember generated this URL for my service endpoint.</p>
+
+<blockquote><p>http://my.website.url/rest/organizations?country=us&amp;state=ohio/<strong>organizations</strong></p></blockquote>
+
+<p>Nothing wrong with Ember. It added <code>organizations</code> resource to the end of the URL. But, where should I enter my search filters so Ember will generate what I want.</p>
+
+<h2>Research</h2>
+
+<p>Ember Data documentation on <a href="https://github.com/basho/ember-data#querying-record-instances">Querying Record Instances</a>.</p>
+
+<blockquote><p>...You can make a server query by passing an Object as the second parameter to find. In this case, you will get back a ModelArray object...</p></blockquote>
+
+<h2>Solution</h2>
+
+<p>Yes! First, I passed the search filters as a parameter to my model's find method. Second, removed the query parameters from the adapter's URL.</p>
+
+<p>``` javascript
+// Route
+App.OrganizationsRoute = Ember.Route.extend({</p>
+
+<pre><code>model: function() {
+    return App.Organization.find({
+        state: 'ohio',
+        country: 'us'
+    });
+}
+</code></pre>
+
+<p>});</p>
+
+<p>// Store
+App.Adapter = DS.RESTAdapter.extend({</p>
+
+<pre><code>bulkCommit: false,
+url: "http://my.website.url/rest"
+</code></pre>
+
+<p>});
+App.Store = DS.Store.extend({</p>
+
+<pre><code>revision: 11,
+adapter: App.Adapter.create()
+</code></pre>
+
+<p>});
+```</p>
+
+<h3>Aha... I have what I wanted.</h3>
+
+<blockquote><p>http://my.website.url/rest/organizations?country=us&amp;state=ohio</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>
