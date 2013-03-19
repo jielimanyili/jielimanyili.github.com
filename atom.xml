@@ -4,7 +4,7 @@
   <title><![CDATA[{render data-logger="jie-li"}]]></title>
   <link href="http://jielimanyili.github.com/atom.xml" rel="self"/>
   <link href="http://jielimanyili.github.com/"/>
-  <updated>2013-03-18T22:27:03-07:00</updated>
+  <updated>2013-03-19T07:44:26-07:00</updated>
   <id>http://jielimanyili.github.com/</id>
   <author>
     <name><![CDATA[Jie Li]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Undo first]]></title>
+    <link href="http://jielimanyili.github.com/blog/2013/03/19/undo-first/"/>
+    <updated>2013-03-19T06:29:00-07:00</updated>
+    <id>http://jielimanyili.github.com/blog/2013/03/19/undo-first</id>
+    <content type="html"><![CDATA[<p><img src="http://jielimanyili.github.com/images/blog/iphone.jpg" title="iphone" ></p>
+
+<p>Something comes to me today. In software development or anything, especially in user experience, it&#8217;s so important to be able to undo what you have just done.</p>
+
+<p>In real life, when you just signed and purchased a million dollar house. Next day, or even just when you walked out of the legal office, you thought, man, what I just did, I wished I would slept on this or even better, undo it. Luckily and legally, you do have three days to change your mind in most of the states, I believe. Undo is important, people need that buffer to change mind.</p>
+
+<p>Knowing that you are able to undo things make making decisions easier. Before making an online purchase, you need to check-out a vendor&#8217;s general return policies. If you will be charged by 15% restock fee with your return, you might want to think again. Do I really want to go through this trouble? Amazon is very smart in this, that&#8217;s one of the reasons they are growing so big. They make return hassle-free. If it&#8217;s problem of the product, you print a shipping label, either they pick the package up or you drop it off at a local shipper. You are done. Money returned in no time.</p>
+
+<p>In software design and development, we often are so excited about being able to do things. Yes, if you click this button, yes, just one click, we will create the order and we will ship it to your door next day. We often forget about undo thing or make undo easier and the most important thing is letting the user know about they can easily undo what they have done.</p>
+
+<p>My mind is racing in all directions now on how undo can be applied and can be beneficial in a lot of fields. In software design, <code>undo</code> in the <code>Edit</code> menu. In browser, the most important user experience Back button. Trash bin on the computer. Transaction in software and database development. Aha, the most dominant and only physical big round Home button on iPhone, iPad, iPod and iEverything. The only purpose of this button is UNDO and going back. My son is 19 months when I am writing this. Never taught him this, but he knows how to use this button. I really don&#8217;t know how. Every time he ran into some apps, the next thing he did after that, was hitting that Home button. To undo thing when he was in a situation of unknown or unfamiliar. It&#8217;s in our nature!</p>
+
+<p>Hope we all know how to build or develop something that can be undo easily. Most important, if we have undo in mind, we could build better things and less mess to clean up.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to query RESTful endpoint with additional query parameters using Ember Data]]></title>
