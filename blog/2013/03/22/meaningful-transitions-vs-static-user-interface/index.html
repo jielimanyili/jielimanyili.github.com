@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Undo first - {render data-logger="jie-li"}</title>
+  <title>Meaningful Transitions vs. Static User Interface - {render data-logger="jie-li"}</title>
   <meta name="author" content="Jie Li">
 
   
-  <meta name="description" content="Something comes to me today. In software development or anything, especially in user experience, it&#8217;s so important to be able to undo what you &hellip;">
+  <meta name="description" content="I am a front-end user experience engineer. I was coding a promotional carousel for my company&#8217;s homepage. The carousel cycles through a list of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jielimanyili.github.com/blog/2013/03/19/undo-first">
+  <link rel="canonical" href="http://jielimanyili.github.com/blog/2013/03/22/meaningful-transitions-vs-static-user-interface">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="{render data-logger="jie-li"}" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Undo First</h1>
+      <h1 class="entry-title">Meaningful Transitions vs. Static User Interface</h1>
     
     
       <p class="meta">
@@ -96,26 +96,30 @@
   
 
 
-<time datetime="2013-03-19T06:29:00-07:00" pubdate data-updated="true">Mar 19<span>th</span>, 2013</time>
+<time datetime="2013-03-22T03:06:00-07:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><img src="/images/blog/iphone.jpg" title="iphone" ></p>
+<div class="entry-content"><p>I am a front-end user experience engineer. I was coding a promotional carousel for my company&#8217;s homepage. The carousel cycles through a list of offers. Each offer slides in from the right and pushes the previous offer out to the left. Nothing special, all  standard behavior.</p>
 
-<p>Something comes to me today. In software development or anything, especially in user experience, it&#8217;s so important to be able to undo what you have just done.</p>
+<p>Another requirement is to show or hide the left and right navigation buttons when user mouse-over or mouse-off the carousel, respectively.No problem, a little Javascript and testing, the job is done.</p>
 
-<p>In real life, when you just signed and purchased a million dollar house. Next day, or even just when you walked out of the legal office, you thought, man, what I just did, I wished I would slept on this or even better, undo it. Luckily and legally, you do have three days to change your mind in most of the states, I believe. Undo is important, people need that buffer to change mind.</p>
+<p>After finishing the requirements, and played a little more with the carousel, I felt something desirable about the navigation buttons. They show or hide so abrupt to me, especially against the nice transition of the promotion slides. Maybe they can be transitioned in and out in some ways. First thought on this is to check out our design specs. Our company does provide very professional wireframe, visual design and specifications. Great for development. But, I don&#8217;t remember seeing anything in the specs about transitions. Things like elastic transitions from left to right, start point and end point, etc.</p>
 
-<p>Knowing that you are able to undo things make making decisions easier. Before making an online purchase, you need to check-out a vendor&#8217;s general return policies. If you will be charged by 15% restock fee with your return, you might want to think again. Do I really want to go through this trouble? Amazon is very smart in this, that&#8217;s one of the reasons they are growing so big. They make return hassle-free. If it&#8217;s problem of the product, you print a shipping label, either they pick the package up or you drop it off at a local shipper. You are done. Money returned in no time.</p>
+<p>Something hit me at the moment. We might still live in a static world on user interface design and development! Do we? And I think I understand why. Even after 15 to 20 years of evolution of web technologies, animation or motion design are still young. With the latest HTML5 and CSS3, we started to see specifications on how to apply them and &#8216;move&#8217; our HTML elements on the screen.</p>
 
-<p>In software design and development, we often are so excited about being able to do things. Yes, if you click this button, yes, just one click, we will create the order and we will ship it to your door next day. We often forget about undo thing or make undo easier and the most important thing is letting the user know about they can easily undo what they have done.</p>
+<p>Aha, great! We could do animations easily now with the standard CSS3. But, before we get too excited. We need to ask ourselves. Should we? And how.</p>
 
-<p>My mind is racing in all directions now on how undo can be applied and can be beneficial in a lot of fields. In software design, <code>undo</code> in the <code>Edit</code> menu. In browser, the most important user experience Back button. Trash bin on the computer. Transaction in software and database development. Aha, the most dominant and only physical big round Home button on iPhone, iPad, iPod and iEverything. The only purpose of this button is UNDO and going back. My son is 19 months when I am writing this. Never taught him this, but he knows how to use this button. I really don&#8217;t know how. Every time he ran into some apps, the next thing he did after that, was hitting that Home button. To undo thing when he was in a situation of unknown or unfamiliar. It&#8217;s in our nature!</p>
+<p>Personally, I think meaningful transitions in user interface will greatly enhance user experience! We live in a physical world! We won&#8217;t feel natural when we see a physical table or object shows or disappears in front of us. Or jumped from one location to another. And why should we accept that in our user interface, just because we can&#8217;t do that easily?</p>
 
-<p>Hope we all know how to build or develop something that can be undo easily. Most important, if we have undo in mind, we could build better things and less mess to clean up.</p>
+<p>One of the biggest problems we are trying to solve in user interface design is user orientation. Show the user why they are in our site, content wise at the least. After so many trials and errors, we have standardized on using navigation bars, breadcrumbs and menus. That&#8217;s all good. But, how about adding some meaningful transitions to the drop-down menus? Drop-down menu can be transitioned from its parent menu position to its final drop-downed position in a physical fashion. Transition back to its original position when it is not needed. This meaningful transition helps to orient user and provides context.</p>
+
+<p>I am not alone. When I tried to research on the title for this blog, I found this site. <a href="http://www.ui-transitions.com">Meaningful Transitions</a>. Highly recommend it!</p>
+
+<p>Forget about this blog. Just read that site. It said it all and a lot more!</p>
 </div>
 
 
@@ -138,12 +142,12 @@
   
 
 
-<time datetime="2013-03-19T06:29:00-07:00" pubdate data-updated="true">Mar 19<span>th</span>, 2013</time>
+<time datetime="2013-03-22T03:06:00-07:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/software-design/'>software design</a>, <a class='category' href='/blog/categories/user-experience/'>user experience</a>
+    <a class='category' href='/blog/categories/software-design/'>software design</a>, <a class='category' href='/blog/categories/user-experience/'>user experience</a>, <a class='category' href='/blog/categories/user-interface-design/'>user interface design</a>
   
 </span>
 
@@ -152,7 +156,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jielimanyili.github.com/blog/2013/03/19/undo-first/" data-via="" data-counturl="http://jielimanyili.github.com/blog/2013/03/19/undo-first/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jielimanyili.github.com/blog/2013/03/22/meaningful-transitions-vs-static-user-interface/" data-via="" data-counturl="http://jielimanyili.github.com/blog/2013/03/22/meaningful-transitions-vs-static-user-interface/" >Tweet</a>
   
   
   
@@ -163,10 +167,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/03/17/how-to-query-restful-endpoint-with-additional-query-parameters-using-ember-data/" title="Previous Post: How to query RESTful endpoint with additional query parameters using Ember Data">&laquo; How to query RESTful endpoint with additional query parameters using Ember Data</a>
+        <a class="basic-alignment left" href="/blog/2013/03/19/undo-first/" title="Previous Post: Undo first">&laquo; Undo first</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/03/22/meaningful-transitions-vs-static-user-interface/" title="Next Post: Meaningful Transitions vs. Static User Interface">Meaningful Transitions vs. Static User Interface &raquo;</a>
       
     </p>
   </footer>
@@ -224,8 +226,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jielimanyili.github.com/blog/2013/03/19/undo-first/';
-        var disqus_url = 'http://jielimanyili.github.com/blog/2013/03/19/undo-first/';
+        var disqus_identifier = 'http://jielimanyili.github.com/blog/2013/03/22/meaningful-transitions-vs-static-user-interface/';
+        var disqus_url = 'http://jielimanyili.github.com/blog/2013/03/22/meaningful-transitions-vs-static-user-interface/';
         var disqus_script = 'embed.js';
       
     (function () {
